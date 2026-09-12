@@ -19,11 +19,15 @@ class Blog(models.Model):
 # python manage.py migrate
 
 
+# python manage.py makemigrations blog
+# python manage.py migrate
+
+
 # models.py
 #     ↓
 # makemigrations
 #     ↓
-# Migration
+# Migration file
 #     ↓
 # migrate
 #     ↓
