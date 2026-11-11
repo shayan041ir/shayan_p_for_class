@@ -5,11 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block css_files %}{% endblock %}
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <title>{% block page_title %}{% endblock %}</title>
   </head>
   <body>
-    {% block content %}{% endblock %}
-    {% block scripts_files %}{% endblock %}
+    {% include 'includes/nav.html' %}
+
+    {% block header %} {% endblock %}
+    {% block content %} {% endblock %} 
+    
+    {% block scripts_files %}
+    <script
+      src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"
+    ></script>
+
+    {% endblock %}
   </body>
 </html>
